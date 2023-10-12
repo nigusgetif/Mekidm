@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Contact Instructor </title>
+	<link rel="stylesheet" href="/nav/studentNav.css">
+	<link rel="stylesheet" href="/assets/css/student/contactInstructor.css" type="text/css">
+	
+
+</head>
+	
+</head>
+<body>
+	<%- include('../partials/studentnav') %>
+	<br>
+	<div align = "center" class="body"><h1> Get Instructor Address </h1> </div><br>
+	<form action="/contactInstructor" method="POST">
+		<div align = "center" class= "class1">Instructor Name <input type="text" placeholder="Search.." name="Search"> </div>
+		<div align = "center" class= "class2"> 
+		<br>
+	<% if (address ==1 ) { %>
+		<p id="red"> No Instructor found by this name </p>
+	<%  } else if(address){ %>
+		<p>Office Number :  <%= address.OfficeNo %> </p>
+		<p>Email : <%= address.Email %></p>
+		<p>Department: <%= address.department %> </p>
+	<% }  %>
+	<button type="submit">Get address</button>
+	</form>
+</body>
+</html>

@@ -1,0 +1,70 @@
+/*Lealem Kinfe |  ETR/5704/11 | News Page */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Ethiopic:wght@300&display=swap');
+
+/* This is the News Part*/
+
+
+
+
+.carousel-item{
+  height: 28rem;
+  background-color: var(--quaternary-color);
+  color: var(--primary-color);
+  position: relative !important;
+  
+  
+ 
+
+}
+.container{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+  padding: none;
+ 
+
+  
+
+}
+
+.overlay-image{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-position: center;
+  background-size: cover;
+  opacity: 1;
+  font-family: Noto serif ethiopic;
+
+
+}
+
+
+
+.btn-primary {
+  color: #fff;
+  background-color:var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+a {
+  color: var(--quinary-color) !important;
+  text-decoration: none;
+}
+  
+
+
+.mylink h2{
+
+  position: absolute;
+  left: 15vh;
+  color: var(--primary-color);
+  
+width: auto;
+
+}

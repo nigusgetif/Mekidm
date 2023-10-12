@@ -1,0 +1,314 @@
+/*Lealem Kinfe |  ETR/5704/11 | Transafer Page */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root{
+  --primary-color:#266777 !important;
+  --secondary-color:#52ab98 !important;
+  --tertiary-color:#c8d8e4 !important;
+  --quaternary-color:#f2f2f2 !important;
+  --quinary-color:#ffffff !important;
+  
+}
+
+.dark-theme{
+  --primary-color:#f0f0f0 !important;
+  --secondary-color:#929292 !important;
+  --tertiary-color:#484848 !important;
+  --quaternary-color:#121212 !important;
+  --quinary-color:#323232 !important;
+}
+
+
+
+body{
+  background-color: var(--quaternary-color);
+}
+:root{
+  --primary: var(--primary-color);
+}
+
+
+button{
+  padding: 15px 35px;
+  font-size:20px;
+  background-color: var(--primary-color);
+  color: black;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover{
+   background-color:  var(--primary-color);
+}
+
+.section{
+  align-items: left;
+  margin-top:20px;
+  width:100%;
+  font-family:"Roboto";
+  text-align:left;
+  color: var(--primary-color);
+  font-size:25px;
+}
+#div_a {
+  float:left;
+  width:35%;
+  text-align:right;
+
+}
+
+#div_b {
+  float:left;
+  width:25%;
+  text-align:right;
+  margin-left:100px;
+}
+#div_c {
+  float:right;
+  width:25%;
+  text-align:right;
+  margin-right:100px;
+}
+footer{
+  position: absolute;
+  bottom: 0vh;
+  right: 0vh;
+  left: 0vh;
+  padding: 10px;
+  
+  color: var(--primary-color);
+  
+}
+.container{
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  
+  margin: 0 auto;
+  
+}
+li{
+  list-style: none;
+  line-height: 2;
+}
+a{
+  text-decoration: none;
+  color: var(--quinary-color);
+}
+.footer-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+
+
+.items li{
+  display: inline-block;
+  padding: 0px 2px;
+  position: relative;
+  bottom: -3vh;
+  color: var(--primary-color);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+.social{
+  display: flex;
+}
+.social a{
+  height: 30px;
+  width: 30px;
+  background: var(--secondary-color);
+  border-radius: 5px;
+  margin:10px 5px;
+  text-align: center;
+}
+.social a i{
+  font-size: 1.3em;
+  line-height: 30px;
+}
+
+
+hr{
+  opacity: .3;
+}
+.footer .end{
+  font-family: Roboto;
+  text-align: center;
+  padding: 20px 0 0 0;
+}
+
+.footer_bottom{
+  position: absolute;
+  bottom: 0vh;
+  left: 50vh;
+  
+}
+
+.form{
+  position:absolute;
+  right: 0vh;
+  padding: 0;
+  border: 100vh;
+  right: 50vh;
+  top: 30vh;
+}
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+.items a{
+  padding: 1.2em;
+}
+.right{
+  position: absolute;
+  padding: 3em 5em;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background:var(--quinary-color);
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+}
+.right h1{
+  color: var(--secondary-color);
+  font-style: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.center h1{
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--secondary-color);
+}
+.center form{
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+form .txt_field{
+  position: relative;
+  border-bottom: 2px solid var(--secondary-color);
+  margin: 30px 0;
+}
+.txt_field input{
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+.txt_field label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: var(--secondary-color);
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: .5s;
+}
+.txt_field span::before{
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--primary-color);
+  transition: .5s;
+}
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+  top: -5px;
+  color: var(--primary-color);
+}
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
+  width: 100%;
+}
+.pass{
+  margin: -5px 0 20px 5px;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+.pass:hover{
+  text-decoration: underline;
+}
+input[type="submit"]{
+  width: 60%;
+  height: 50px;
+  border:none;
+  background: var(--quinary-color);
+  border-radius: 10px;
+  font-size: 18px;
+  color: var(--secondary-color);
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+input[type="submit"]:hover{
+  border-color: var(--primary-color);
+  background:var(--primary-color);
+  color: var(--quinary-color);
+  transition: .5s;
+}
+input[type=text] {
+  width:250px;
+  padding:12px;
+  border: 2px solid var(--quinary-color);
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-radius:10px;
+  margin: 3px;
+}
+
+.left{
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background:var(--quaternary-color);
+  border-radius: 10px;
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

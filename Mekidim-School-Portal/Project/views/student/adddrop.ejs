@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<!--Done By Merry Terefe-->
+
+<head>
+    <title>ADD and DROP</title>
+
+  
+
+    <link rel="stylesheet" href="/assets/css/student/Registration.css">
+    <!--This link the the html with css file-->
+    <link rel="stylesheet" href="/assets/css/student/HeaderOFCourse.css">
+    <!--This link the the html with css file-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    
+
+</head>
+
+<body>
+    <!--This the body where all content that is displayed in the page is coded-->
+    <%- include('../partials/studentnav') %>
+    <div class="wrapper">
+        <!--This contens the whole division of the html page-->
+        
+
+       
+        <div class="content">
+            <!--The Main Content Of the Page is displayed here-->
+            <h2>ADD and DROP </h2>
+            <p>Please select the courses for Add or Drop</p>
+            <div class="table_decorator">
+                <!--The division the contains the table-->
+                <form method="POST" action="/adddrop">
+                <table id="Table1">
+                    <tr>
+                        <!--The row of the table-->
+                        <th>&nbsp;</th>
+                        <!--The header row of the table-->
+                        <th>Course Title</th>
+                        <th>Course Code</th>
+                        <th>ECTS</th>
+                        <th>Credit Hours</th>
+                        <th>Module Name</th>
+                    </tr>
+                    
+                        <% if(page) { %>
+                            <% courses.forEach( course => { %>
+                                <tr>
+                                <td><input name="course" value=<%= course.CourseID %> type="checkbox"/></td>
+                                <td><%= course.NAME %></td>
+                                <td><%= course.CourseID %></td>
+                                <td><%= course.ECTS %></td>
+                                <td><%= course.CreditHour %></td>
+                                <td><%= course.ModuleName %></td>    
+                                </tr>                     
+                              <% }) %>
+                           
+                        <% } else { %>
+                            <p> No courses to be added or dropped</p>
+                         <%  } %>
+                        
+                       
+                </table>
+
+                <input type = "submit" id="add"  name="sub" value="ADD">
+                <!--The ADD button -->
+                <input type = "submit" id="drop" value="DROP" name="sub">
+                <!--THE DROP button-->
+            </form>
+            </div>
+        </div>
+       
+    </div>
+    <script>
+        var icon = document.getElementById("icon");
+        icon.onclick = function () {
+            document.body.classList.toggle("dark-theme");
+            if (document.body.classList.contains("dark-theme")) {
+                icon.src = "../../assets/images/light2.png";
+                meklog.src = "../../assets/images/logo3.png";
+
+            } else {
+                icon.src = "../../assets/images/dark2.png";
+                meklog.src = "../../assets/images/logo.png";
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>

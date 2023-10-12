@@ -1,0 +1,104 @@
+<!-- Event schedule checking by Sherif Ahmed -->
+<!DOCTYPE html>
+<html>
+
+<head>
+   
+        <title>Event Schedule Checking</title>
+       
+       
+        <link rel="stylesheet" href="/assets/css/student/Event.css">
+        <link rel="stylesheet" href="/nav/studentNav.css">
+        
+        <!--This link the the html with css file-->
+        
+    
+</head>
+ 
+
+
+<body>
+    <%- include('../partials/studentnav') %>
+    
+    <div class="content">
+      <!--The main content of the Page-->
+      <h4>Welcome to Event Schedule Checking</h4>
+
+      <p>Please provide the date you are looking for an event</p>
+      <div class="prelude">
+           
+            <form action="/eventschedulechecking" method="post">
+
+            <div class="prelude">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="edate">Event Date</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="date" id="edate" name="event_date" placeholder="Event date...." required>
+                    </div>
+                </div>
+            </div>
+       
+            
+            <table>
+                <% if(msg != 0) { %>
+                <tr>
+                  <th>Event Name</th>
+                  <td> <%= msg.EventName %>  </td>
+                </tr>
+                <tr>
+                    <th>Event Date</th>
+                    <td> <%= msg.Date %>  </td>
+                </tr>
+                <tr>
+                    <th>Event Venue</th>
+                    <td> <%= msg.eventvenue %>  </td>
+                </tr>
+                <tr>
+                    <th>Event Start</th>
+                    <td> <%= msg.Startingtime %>  </td>
+                </tr>
+                <tr>
+                    <th>Event End</th>
+                    <td> <%= msg.Endtime %>  </td>
+                </tr>
+                <tr>
+                    <th>Event Description</th>
+                    <td> <%= msg.Eventdescription %>  </td>
+                </tr>             
+                </table>
+                   <% } else {%>
+                   </table>
+                    <p>There is no Event on the specified date!  </p> %>
+                   <% } %>
+
+                   <div class="row">
+                    <input type="submit" value="Submit">
+                   </div>
+                   
+              
+             
+            </form>
+       
+    </section>
+    <script>
+        var icon = document.getElementById("icon");
+        icon.onclick = function () {
+          document.body.classList.toggle("dark-theme");
+          if (document.body.classList.contains("dark-theme")) {
+            icon.src = "/assets/images/light2.png";
+            meklog.src = "/assets/images/logo3.png";
+    
+          } else {
+            icon.src = "/assets/images/dark2.png";
+            meklog.src = "/assets/images/logo.png";
+    
+          }
+    
+        }
+      </script>
+</body>
+
+
+</html>

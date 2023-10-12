@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title >Contact Department Head</title>
+  <link rel="stylesheet" href="/nav/studentNav.css">
+    <link rel="stylesheet" href="/assets/css/student/contactDepartmentHead.css" type="text/css">
+   
+
+	
+	
+</head>
+<body>
+  <%- include('../partials/studentnav') %>
+<form action="/contactdephead" method="POST">
+	<div class= "body" > <h1> Contact Departement Head</h1> </div> <br>
+<div align = "center" class= "class1"> <select name="department" >
+
+  <option value="Eleceng">Select</option>
+  <option value="Eleceng">Electrical and Computer</option>
+  <option value="civil">Civil and Enviromental</option>
+  <option value="mechanical">Mechanical and Industrial</option>
+  <option value="biomedical">Biomedial </option>
+  <option value="chemical">Chemical and Bio</option>
+  <option value="it">Information Technology</option>
+</select></div><br>
+
+<div align="center" > <input name = "subject" type = "text" placeholder="Subject"> </div> <br>
+<div align="center"> <input name = "bodyy"  id="message" type = "text" placeholder="write your message here..."> </div> <br>
+
+<div align = "center" > <input  name= "submit" value ="submit" type = "submit"> </div> </article>
+</form>
+<%  if( error ) {  %>
+  <h1> Error with input form </h1>
+
+<%  } %>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h2 align='center' style="color:rgb(172, 142, 142);"> quote of the day</h2>
+<%  if( page ) {  %>
+  <h2 align='center' style="color:rgb(138, 136, 136);" > "<%= content %> "</h2>
+  <span style="padding-left: 1000px; display:block">  ... <%= author %> </span>
+<%  } %>
+
+<footer class="footer">
+      
+  <div class="container">
+    
+    <div class="footer_bottom"><small class="end">Copyright © 2021 by Mekdim. All rights reserved.</small> </div>
+    
+</div>
+  
+</footer>
+</body>
+</html>
